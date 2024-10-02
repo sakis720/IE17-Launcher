@@ -13,12 +13,11 @@ int main()
 
 	std::this_thread::sleep_for(std::chrono::seconds(1));
 
-	LPCSTR DllPath = "IE17.dll"; //put your dir \\dll.dll
+	LPCSTR DllPath = "IE17.dll"; 
 
-	//HWND hwnd = FindWindowA(NULL, "Notepad"); 
 	HWND hwnd = ::FindWindow(TEXT("GHOSTBUSTERS: The Video Game Remastered"), NULL); 
 
-	assert(IsWindow(hwnd)); //just in case
+	assert(IsWindow(hwnd));
 
 	SetWindowTextA(hwnd, "GHOSTBUSTERS: The Video Game Remastered | IE17 Build v.0.01"); //or send a WM_SETTEXT message
 
