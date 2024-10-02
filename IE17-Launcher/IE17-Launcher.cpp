@@ -19,7 +19,7 @@ int main()
 
 	assert(IsWindow(hwnd));
 
-	SetWindowTextA(hwnd, "GHOSTBUSTERS: The Video Game Remastered | IE17 Build v.0.01"); //or send a WM_SETTEXT message
+	SetWindowTextA(hwnd, "GHOSTBUSTERS: The Video Game Remastered | IE17 Build v.0.02"); //or send a WM_SETTEXT message
 
 	DWORD procID;
 	GetWindowThreadProcessId(hwnd, &procID);
