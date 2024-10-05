@@ -23,18 +23,13 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="IE17-Launcher.rc">
       <Filter>Source Files\Resource Files</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="icon1.ico">
-      <Filter>Source Files\Resource Files</Filter>
-    </Image>
-    <Image Include="logo_in.ico">
-      <Filter>Source Files\Resource Files</Filter>
-    </Image>
   </ItemGroup>
 </Project>
