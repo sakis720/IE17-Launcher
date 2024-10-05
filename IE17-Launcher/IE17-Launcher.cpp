@@ -3,23 +3,19 @@
 #include <thread> 
 #include <chrono>
 #include <cassert>
-
+#include "main.h"
 
 
 int main()
 {
-
 	ShellExecuteW(NULL, L"open", L"ghost.exe", NULL, NULL, SW_SHOWNORMAL);
 
 	std::this_thread::sleep_for(std::chrono::seconds(1));
 
 	LPCSTR DllPath = "IE17.dll"; 
 
+
 	HWND hwnd = ::FindWindow(TEXT("GHOSTBUSTERS: The Video Game Remastered"), NULL); 
-
-	assert(IsWindow(hwnd));
-
-	SetWindowTextA(hwnd, "GHOSTBUSTERS: The Video Game Remastered | IE17 Build v.0.02"); //or send a WM_SETTEXT message
 
 	DWORD procID;
 	GetWindowThreadProcessId(hwnd, &procID);
@@ -35,6 +31,9 @@ int main()
 
 	VirtualFreeEx(handle, pDllPath, strlen(DllPath) + 1, MEM_RELEASE);
 
+	assert(IsWindow(hwnd));
+
+	SetWindowTextA(hwnd, "GHOSTBUSTERS: The Video Game Remastered | IE17 Compiled at " STR(__DATE__)); //or send a WM_SETTEXT message
 
 	return 0;
 }
